@@ -7,10 +7,10 @@
 
 import Foundation
 
-// Otların birim fiyatlarını tutan sözlük
+
 var otFiyatlari: [String: Double] = [:]
 
-// O günün ot birim fiyatlarını girer
+
 func girisYap() {
     print("Günün ot birim fiyatlarını girin:")
     otFiyatlari["kekik"] = otBirimFiyat("kekik")
@@ -19,7 +19,7 @@ func girisYap() {
     otFiyatlari["reyhan"] = otBirimFiyat("reyhan")
 }
 
-// Ot birim fiyatını döndüren fonksiyon
+
 func otBirimFiyat(_ otAdi: String) -> Double {
     let birimFiyat: Double
     switch otAdi {
@@ -41,7 +41,7 @@ func otBirimFiyat(_ otAdi: String) -> Double {
     return birimFiyat
 }
 
-// Otun tazelik etkisini hesaplayan fonksiyon
+
 func tazelikEtkisi(_ otAdi: String) -> Double {
     let tazelikKaybi: Double
     switch otAdi {
@@ -57,7 +57,7 @@ func tazelikEtkisi(_ otAdi: String) -> Double {
     return tazelikKaybi
 }
 
-// Satış tutarını hesaplayan fonksiyon
+
 func satisTutariHesapla() {
     print("Satın alacağınız otun adını girin (kekik, nane, fesleğen, reyhan):")
     if let otAdi = readLine() {
@@ -71,23 +71,22 @@ func satisTutariHesapla() {
                 let sonFiyat = toplamFiyat + (toplamFiyat * tazelikEtki)
                 
                 print("\(otAdi): \(miktar)kg x \(birimFiyat * tazelikEtki)TL = \(sonFiyat)TL", terminator: " ")
-                print(taze == 1 ? "Taze" : "Taze değil", terminator: ". ")
+                print(taze == 1 ? "Taze" : "Taze değil")
                 faturaYazdir(sonFiyat)
             }
         }
     }
 }
 
-// Faturayı yazdıran fonksiyon
+
 func faturaYazdir(_ tutar: Double) {
     let kdvOrani = 0.18
     let kdvTutari = tutar * kdvOrani
     let toplamTutar = tutar + kdvTutari
     
-    print("KDV (%\(kdvOrani * 100)): \(kdvTutari) TL", terminator: " ")
+    print("KDV (%\(kdvOrani * 100)): \(kdvTutari) TL")
     print("Genel Toplam: \(toplamTutar) TL")
 }
 
-// Programı çalıştır
 girisYap()
 satisTutariHesapla()
