@@ -45,10 +45,7 @@
 		67476F292A1F5C3000662034 = {
 			isa = PBXGroup;
 			children = (
-				677E98DE2A21022F00A2128E /* CaseTwo.swift */,
-				677E98E22A2105BD00A2128E /* CaseOne.swift */,
-				67476F352A1F5C3000662034 /* main.swift */,
-				67476F342A1F5C3000662034 /* CaseOne */,
+				67476F342A1F5C3000662034 /* Case */,
 				67476F332A1F5C3000662034 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,11 +58,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		67476F342A1F5C3000662034 /* CaseOne */ = {
+		67476F342A1F5C3000662034 /* Case */ = {
 			isa = PBXGroup;
 			children = (
+				677E98DE2A21022F00A2128E /* CaseTwo.swift */,
+				67476F352A1F5C3000662034 /* main.swift */,
+				677E98E22A2105BD00A2128E /* CaseOne.swift */,
 			);
-			path = CaseOne;
+			path = Case;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
